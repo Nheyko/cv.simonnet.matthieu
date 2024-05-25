@@ -126,6 +126,7 @@ window.onload = function () {
 
             // Refactored
             // Hide all pages
+
             pages.forEach((page) => {
                 page.classList.add('hide');
             });
