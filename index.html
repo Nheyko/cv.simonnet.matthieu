@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>CV Simonnet Matthieu</title>
+  </head>
+
+  <body class="flex justify-center">
+    <div class="menu" id="menu">
+      <div class="selected menu-tab" id="menuProfile">
+        <p class="menu-text-tab">PROFIL</p>
+      </div>
+      <div class="unselected menu-tab" id="menuSkills">
+        <p class="menu-text-tab">COMPÉTENCES</p>
+      </div>
+      <div class="unselected menu-tab" id="menuProjects">
+        <p class="menu-text-tab">PROJETS</p>
+      </div>
+      <div class="unselected menu-tab" id="menuTrainings">
+        <p class="menu-text-tab">FORMATIONS</p>
+      </div>
+      <div class="unselected menu-tab bottom-border" id="menuHobbies">
+        <p class="menu-text-tab">LOISIRS</p>
+      </div>
+    </div>
+
+    <div class="layout border-t border-b border-r border-white" id="layout">
+      <div class="layout-inner" id="layoutInner">
+        <header class="pb-5">
+          <h1 class="text-5xl">CV SIMONNET Matthieu</h1>
+          <h2 class="text-4xl">Développeur Web Junior</h2>
+          <hr class="mt-1" />
+        </header>
+
+        <main>
+          <div class="display pl-10" id="profile">
+            <h3 class="text-3xl">Profil</h3>
+            <hr class="mb-5" />
+
+            <div class="pl-10">
+              <p>32 ans</p>
+              <p>Le Pontet, Vaucluse</p>
+              <p>Français natif</p>
+              <p>Anglais B2</p>
+              <p class="mb-5">Coréen notions</p>
+
+              <p>Maintenant disponible pour toutes vos missions !</p>
+              <a href="https://github.com/Nheyko"
+                ><p class="mb-5">https://github.com/Nheyko</p></a
+              >
+
+              <p>
+                Diplômé en Concepteur Développeur d'Applications et passioné de
+                développement web depuis plusieurs années, je me suis spécialisé
+                dans Angular et NestJS.
+              </p>
+              <p class="mb-5">
+                J'ai eu l'occasion de toucher un peu à React et Python ainsi que
+                d'autres language comme le C, C++ et Java.
+              </p>
+              <p>
+                La stack que j'utilise pour mes projets perso : HTML5, CSS3,
+                Tailwind, ES6+,Typescript, Angular, TypeORM Mysql2.
+              </p>
+            </div>
+          </div>
+
+          <div class="hide pl-10" id="skills">
+            <h3 class="text-3xl">Compétences</h3>
+            <hr class="mb-5" />
+
+            <div>
+              <div class="pl-10">
+                <h4 class="text-2xl">Langages</h4>
+                <hr class="mb-5" />
+                <ul class="pl-10">
+                  <li>
+                    <p>HTML5</p>
+                  </li>
+                  <li>
+                    <p>CSS3</p>
+                  </li>
+                  <li>
+                    <p>Typescript & JavaScript (ES-2022)</p>
+                  </li>
+                  <li>
+                    <p>Python notions</p>
+                  </li>
+                  <li>
+                    <p>Java notions</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-5 pl-10">
+                <h4 class="text-2xl">Frameworks & APIs</h4>
+                <hr class="mb-5" />
+                <ul class="pl-10">
+                  <li>
+                    <p>Angular</p>
+                  </li>
+                  <li>
+                    <p>NestJS</p>
+                  </li>
+                  <li>
+                    <p>React notions</p>
+                  </li>
+                  <li>
+                    <p>TailwindCSS</p>
+                  </li>
+                  <li>
+                    <p>API Rest</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-5 pl-10">
+                <h4 class="text-2xl">Serveurs web</h4>
+                <hr class="mb-5" />
+                <ul class="pl-10">
+                  <li>
+                    <p>NodeJS</p>
+                  </li>
+                  <li>
+                    <p>Express</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-5 pl-10">
+                <h4 class="text-2xl">SGBDs</h4>
+                <hr class="mb-5" />
+                <ul class="pl-10">
+                  <li>
+                    <p>MySQL</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-5 pl-10">
+                <h4 class="text-2xl">Version</h4>
+                <hr class="mb-5" />
+                <ul class="pl-10">
+                  <li>
+                    <p>Git</p>
+                  </li>
+                  <li>
+                    <p>Github</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-5 pl-10">
+                <h4 class="text-2xl">Méthodologie</h4>
+                <hr class="mb-5" />
+                <ul class="pl-10">
+                  <li>
+                    <p>Scrum</p>
+                  </li>
+                  <li>
+                    <p>Kanban</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-5 pl-10">
+                <h4 class="text-2xl">IDE</h4>
+                <hr class="mb-5" />
+                <ul class="pl-10">
+                  <li>
+                    <p>Visual Studio Code</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-5 pl-10">
+                <h4 class="text-2xl">OS</h4>
+                <hr class="mb-5" />
+                <ul class="pl-10">
+                  <li>
+                    <p>Windows</p>
+                  </li>
+                  <li>
+                    <p>Linux notions</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="hide" id="projects">
+            <div class="pl-10">
+              <h3 class="text-3xl">Projets personnels</h3>
+              <hr class="mb-5" />
+
+              <div class="pl-10">
+                <ul>
+                  <li>
+                    <p>
+                      Chatbox avec système d'authentification, messages privés
+                      et liste de gens connectés:
+                    </p>
+                    <p>
+                      <a
+                        href="https://github.com/Nheyko/angular-nestjs-chatbox-v3"
+                        target="_blank"
+                        >https://github.com/Nheyko/angular-nestjs-chatbox-v3</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p class="mt-5">Todo list en Angular et NestJs -></p>
+                    <p>
+                      <a
+                        href="https://github.com/Nheyko/angular-nestjs-to-do-list"
+                        target="_blank"
+                        >https://github.com/Nheyko/angular-nestjs-to-do-list</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p class="mt-5">
+                      Entrainement système d'authentification avec Angular et
+                      NestJS:
+                    </p>
+                    <p>
+                      <a
+                        href="https://github.com/Nheyko/angular-nestjs-auth-v1"
+                        target="_blank"
+                        >https://github.com/Nheyko/angular-nestjs-auth-v1</a
+                      >
+                    </p>
+                  </li>
+                  <li>
+                    <p class="mt-5">
+                      Découverte des mécaniques d'un rpg avec python:
+                    </p>
+                    <p>
+                      <a
+                        href="https://github.com/Nheyko/Kitsuneko"
+                        target="_blank"
+                        >https://github.com/Nheyko/Kitsuneko</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="hide pl-10" id="trainings">
+            <h3 class="text-3xl">Formations</h3>
+            <hr class="mb-5" />
+            <div class="pl-10">
+              <ul>
+                <li>
+                  <p>Concepteur Développeur d'Applications</p>
+                  <p>2021-2022</p>
+                  <p>M2i, 69003 Lyon</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hide pl-10" id="hobbies">
+            <h3 class="text-3xl">Loisirs</h3>
+            <hr class="mb-5" />
+            <div class="pl-10">
+              <ul>
+                <li>
+                  <p>Jeux vidéos</p>
+                </li>
+                <li>
+                  <p>Musique</p>
+                </li>
+                <li>
+                  <p>Animation japonaise</p>
+                </li>
+                <li>
+                  <p>Culture anglaise, coréenne et japonaise</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+        <footer></footer>
+      </div>
+      <div
+        style="width: 3px; position: absolute; bottom: 18px"
+        class=""
+        id="scrollHint"
+      ></div>
+    </div>
+  </body>
+</html>
