@@ -1,12 +1,13 @@
 window.onload = function () {
 
-    var menu = document.getElementById('menu');
-    var layout = document.getElementById('layout');
-    var menuHobbies = document.getElementById('menuHobbies');
-    var scrollHint = document.getElementById('scrollHint');
-    var layoutInner = document.getElementById('layoutInner');
+    const menu = document.getElementById('menu');
+    const layout = document.getElementById('layout');
+    const menuHobbies = document.getElementById('menuHobbies');
+    const menuTrainings = document.getElementById('menuTrainings')
+    const scrollHint = document.getElementById('scrollHint');
+    const layoutInner = document.getElementById('layoutInner');
 
-    var menus = [
+    const menus = [
         document.getElementById('menuProfile'),
         document.getElementById('menuSkills'),
         document.getElementById('menuProjects'),
@@ -14,7 +15,7 @@ window.onload = function () {
         document.getElementById('menuHobbies')
     ];
 
-    var pages = [
+    const pages = [
         document.getElementById('profile'),
         document.getElementById('skills'),
         document.getElementById('projects'),
@@ -24,9 +25,9 @@ window.onload = function () {
 
     // Calculate the size of the scrollbar to replace the arrow css with end-arrow css.
     layoutInner.onscroll = function () {
-        var scrollHeight = layoutInner.scrollHeight;
-        var scrollTop = layoutInner.scrollTop;
-        var clientHeight = layoutInner.clientHeight;
+        const scrollHeight = layoutInner.scrollHeight;
+        const scrollTop = layoutInner.scrollTop;
+        const clientHeight = layoutInner.clientHeight;
 
         if (scrollTop + clientHeight >= scrollHeight - 1) {
             scrollHint.classList.replace('arrow', 'end-arrow');
@@ -48,11 +49,13 @@ window.onload = function () {
             this.classList.remove('unselected');
             this.classList.add('selected');
 
-            // Adjust border of the last menu.
+            // Fix borders of the menu.
             if (this.id === 'menuHobbies') {
                 menuHobbies.classList.remove('bottom-border');
+                menuTrainings.classList.add('bottom-border');
             } else {
                 menuHobbies.classList.add('bottom-border');
+                menuTrainings.classList.remove('bottom-border');
             }
 
             // Add or remove the arrow at the bottom of Skills page when entering or leaving the page.
@@ -124,7 +127,6 @@ window.onload = function () {
             // Refactored
             // Hide all pages
             pages.forEach((page) => {
-                page.classList.remove('display');
                 page.classList.add('hide');
             });
 
@@ -153,16 +155,10 @@ window.onload = function () {
             // Show the determined page
             const pageToShow = document.getElementById(pageToShowId);
             pageToShow.classList.remove('hide');
-            pageToShow.classList.add('display');
 
             this.classList.remove('unselected');
             this.classList.add('selected');
         });
-
-        menuItem.onmouseover = function () {
-            this.style.cursor = 'pointer';
-        };
-
     });
 
     // Adjust the height of the layout depending of the menu height
