@@ -1,13 +1,24 @@
+/* PC & Mobile Version */
+
+/* ============ HTML élements ============ */
+
 body {
-    margin: 0 auto;
     color: #E0E0E0;
     background-color: #121212;
-    min-height: 100vh;
-    align-items: center;
+}
+
+div {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 li {
     list-style: '- ';
+}
+
+a {
+    color: #b5daeb !important;
+    display: block;
 }
 
 header {
@@ -17,58 +28,28 @@ header {
     z-index: 1000;
 }
 
-a {
-    color: #b5daeb !important;
-    display: block;
+p {
+    text-align: justify;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-div {
-    width: 100%;
-    box-sizing: border-box;
-}
+/* ============ Layout ============ */
 
 .outer-layout {
-    margin: 0 auto;
-    min-width: 1280px;
-    width: 1280px;
-    padding: 2.5rem;
+    display: flex;
+    padding: 1.5rem;
+    flex-direction: column-reverse;
+    height: 100vh;
 }
 
 .layout {
     position: relative;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
-    padding: 2.5rem;
+    padding: 1.5rem;
     background-color: #242424;
     align-items: center;
-
-}
-
-.arrow {
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.end-arrow {
-    border: solid gray;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    border-left: 1px solid white;
 }
 
 .layout-inner {
@@ -81,46 +62,57 @@ div {
     scrollbar-width: none;
 }
 
+/* ============ Text ============ */
+
+.legend {
+    font-size: 0.67em;
+}
+
+/* ============ Navigation ============ */
+
 .menu {
-    height: fit-content;
-    width: 50px;
+    display: flex;
+    height: 50px;
     background-color: #242424;
     cursor: pointer;
 }
 
 .menu-tab {
-    text-align: center;
     align-content: center;
-    padding: 1rem;
-    width: 50px;
-    font-size: 0.75rem;
-}
-
-.menu-text-tab {
-    text-orientation: upright;
-    writing-mode: vertical-rl
+    text-align: center;
+    text-align-last: center;
+    width: 100px;
+    font-size: 0.6rem;
 }
 
 .selected {
-    border-top: 1px solid white;
+    border-top: none;
     border-left: 1px solid white;
     border-bottom: 1px solid white;
-    border-right: none;
+    border-right: 1px solid white;
 }
 
 .unselected {
-    border-right: 1px solid white;
-    border-top: 1px solid gray;
-}
-
-.bottom-border {
+    border-top: none;
+    border-left: none;
+    border-right: 1px solid gray;
     border-bottom: 1px solid gray;
 }
+
+/* ============ Additional borders ============ */
+
+.left-border {
+    border-left: 1px solid gray;
+}
+
+/* ============ Page hiding content ============ */
 
 .hide {
     height: 0;
     overflow: hidden;
 }
+
+/* ============ Corner for stars in Skills page ============ */
 
 .line-horizontal-top::after {
     width: 8px;
@@ -156,4 +148,112 @@ div {
     bottom: 0px;
     height: 8px;
     border-right: 1px solid white;
+}
+
+/* PC Only*/
+@media only screen and (min-width: 640px) {
+
+    /* ============ HTML élements ============ */
+
+    body {
+        height: 100vh;
+        align-content: center;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* ============ Layout ============ */
+
+    .outer-layout {
+        margin: 0 auto;
+        min-width: 1280px;
+        width: 1280px;
+        flex-direction: row;
+        padding: 2.5rem;
+        justify-items: center;
+        height: auto;
+    }
+
+    .layout {
+        border-left: none;
+        padding: 2.5rem;
+    }
+
+    /* ============ Text ============ */
+
+    .legend {
+        font-size: 1em;
+    }
+
+    /* ============ Arrow for Skills bottom page ============ */
+
+    .arrow {
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+    .end-arrow {
+        border: solid gray;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+    /* ============ Navigation ============ */
+
+    .menu {
+        display: block;
+        height: fit-content;
+        width: 50px;
+        background-color: #242424;
+        cursor: pointer;
+    }
+
+    .menu-tab {
+        text-align: center;
+        align-content: center;
+        padding: 1rem;
+        width: 50px;
+        font-size: 0.75rem;
+    }
+
+    .menu-text-tab {
+        text-orientation: upright;
+        writing-mode: vertical-rl
+    }
+
+    .selected {
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-bottom: 1px solid white;
+        border-right: none;
+    }
+
+    .unselected {
+        border-right: 1px solid white;
+        border-top: 1px solid gray;
+        border-bottom: none;
+        border-left: none;
+    }
+
+    /* ============ Page hiding content ============ */
+
+    .hide {
+        height: 0;
+        overflow: hidden;
+    }
+
+    /* ============ Additional borders ============ */
+
+    .bottom-border {
+        border-bottom: 1px solid gray;
+    }
 }
