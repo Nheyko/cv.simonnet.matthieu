@@ -83,6 +83,7 @@ p {
     text-align-last: center;
     width: 100px;
     font-size: 0.6rem;
+    height: 50px;
 }
 
 .selected {
@@ -223,6 +224,7 @@ p {
         padding: 1rem;
         width: 50px;
         font-size: 0.75rem;
+        height: auto;
     }
 
     .menu-text-tab {
