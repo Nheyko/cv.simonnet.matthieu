@@ -28,17 +28,13 @@ header {
     z-index: 1000;
 }
 
-p {
-    text-align: justify;
-}
-
 /* ============ Layout ============ */
 
 .outer-layout {
     display: flex;
     padding: 1.5rem;
     flex-direction: column-reverse;
-    height: 100vh;
+    height: 100vmax;
 }
 
 .layout {
@@ -65,7 +61,7 @@ p {
 /* ============ Text ============ */
 
 .legend {
-    font-size: 0.67em;
+    font-size: 0.5 em;
 }
 
 /* ============ Navigation ============ */
@@ -163,6 +159,10 @@ p {
 
     a:hover {
         text-decoration: underline;
+    }
+
+    p {
+        text-align: justify;
     }
 
     /* ============ Layout ============ */

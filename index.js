@@ -7,11 +7,15 @@ window.onload = function () {
     const menuTrainings = document.getElementById('menuTrainings')
     const scrollHint = document.getElementById('scrollHint');
     const layoutInner = document.getElementById('layoutInner');
+
+
     let layoutWidth = window.innerWidth;
+    let layoutHeight = getComputedStyle(menu).height;
 
     // Calculate width to know if we are on phone or not.
     window.addEventListener('resize', function () {
         layoutWidth = window.innerWidth;
+        layout.style.height = getComputedStyle(menu).height;
     });
 
     const menus = [
