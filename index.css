@@ -34,7 +34,7 @@ header {
     display: flex;
     padding: 1.5rem;
     flex-direction: column-reverse;
-    height: 100vmax;
+    height: 100vh;
 }
 
 .layout {
@@ -61,7 +61,7 @@ header {
 /* ============ Text ============ */
 
 .legend {
-    font-size: 0.5 em;
+    font-size: 0.5em;
 }
 
 /* ============ Navigation ============ */
