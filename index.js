@@ -8,10 +8,29 @@ window.onload = function () {
     const scrollHint = document.getElementById('scrollHint');
     const layoutInner = document.getElementById('layoutInner');
 
+    const menus = [
+        document.getElementById('menuProfile'),
+        document.getElementById('menuSkills'),
+        document.getElementById('menuProjects'),
+        document.getElementById('menuTrainings'),
+        document.getElementById('menuHobbies')
+    ];
+
+    const pages = [
+        document.getElementById('profile'),
+        document.getElementById('skills'),
+        document.getElementById('projects'),
+        document.getElementById('trainings'),
+        document.getElementById('hobbies')
+    ]
+
     let layoutWidth = window.innerWidth;
 
     // Calculate the height of the pages according to the height of the menu.
     layout.style.height = getComputedStyle(menu).height;
+
+    // Add the arrow at the loading of Profile page.
+    scrollHint.classList.add('arrow');
 
     // Calculate width to know if we are on phone or not.
     window.addEventListener('resize', function () {
@@ -32,22 +51,6 @@ window.onload = function () {
             menuProfile.classList.remove('left-border');
         }
     });
-
-    const menus = [
-        document.getElementById('menuProfile'),
-        document.getElementById('menuSkills'),
-        document.getElementById('menuProjects'),
-        document.getElementById('menuTrainings'),
-        document.getElementById('menuHobbies')
-    ];
-
-    const pages = [
-        document.getElementById('profile'),
-        document.getElementById('skills'),
-        document.getElementById('projects'),
-        document.getElementById('trainings'),
-        document.getElementById('hobbies')
-    ]
 
     // Calculate the size of the scrollbar to replace the arrow css with end-arrow css.
     layoutInner.onscroll = function () {
