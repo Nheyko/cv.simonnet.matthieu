@@ -46,6 +46,7 @@ header {
     background-color: #242424;
     align-items: center;
     border-left: 1px solid white;
+    min-width: 350px;
 }
 
 .layout-inner {
@@ -61,7 +62,7 @@ header {
 /* ============ Text ============ */
 
 .legend {
-    font-size: 0.5em;
+    font-size: 0.7em;
 }
 
 /* ============ Navigation ============ */
@@ -71,6 +72,7 @@ header {
     height: 50px;
     background-color: #242424;
     cursor: pointer;
+    min-width: 350px;
 }
 
 .menu-tab {
@@ -80,6 +82,7 @@ header {
     width: 100px;
     font-size: 0.6rem;
     height: 50px;
+    min-width: 20%;
 }
 
 .selected {
@@ -147,6 +150,32 @@ header {
     border-right: 1px solid white;
 }
 
+/* ============ Arrow for Skills bottom page ============ */
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.end-arrow {
+    border: solid gray;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.scroll-hint {
+    width: 3px;
+    position: absolute;
+    bottom: 11px;
+}
+
 /* PC Only*/
 @media only screen and (min-width: 640px) {
 
@@ -180,6 +209,7 @@ header {
     .layout {
         border-left: none;
         padding: 2.5rem;
+        min-width: auto;
     }
 
     /* ============ Text ============ */
@@ -208,14 +238,17 @@ header {
         -webkit-transform: rotate(45deg);
     }
 
+    .scroll-hint {
+        bottom: 14px;
+    }
+
     /* ============ Navigation ============ */
 
     .menu {
         display: block;
         height: fit-content;
         width: 50px;
-        background-color: #242424;
-        cursor: pointer;
+        min-width: auto;
     }
 
     .menu-tab {

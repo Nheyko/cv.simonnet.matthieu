@@ -8,14 +8,29 @@ window.onload = function () {
     const scrollHint = document.getElementById('scrollHint');
     const layoutInner = document.getElementById('layoutInner');
 
-
     let layoutWidth = window.innerWidth;
-    let layoutHeight = getComputedStyle(menu).height;
+
+    // Calculate the height of the pages according to the height of the menu.
+    layout.style.height = getComputedStyle(menu).height;
 
     // Calculate width to know if we are on phone or not.
     window.addEventListener('resize', function () {
         layoutWidth = window.innerWidth;
         layout.style.height = getComputedStyle(menu).height;
+
+        // Fix borders bug when responsive mode.
+        if (layoutWidth > 640 && menuHobbies.classList.contains('selected')) {
+            menuHobbies.classList.remove('bottom-border');
+        }
+        else {
+            menuHobbies.classList.add('bottom-border');
+        }
+
+        if (layoutWidth < 640 && menuProfile.classList.contains('unselected')) {
+            menuProfile.classList.add('left-border');
+        } else if (layoutWidth < 640 && menuProfile.classList.contains('selected')) {
+            menuProfile.classList.remove('left-border');
+        }
     });
 
     const menus = [
@@ -57,9 +72,6 @@ window.onload = function () {
                 item.classList.add('unselected');
             });
 
-            this.classList.remove('unselected');
-            this.classList.add('selected');
-
             // Fix borders of the Mobile menu.
             if (this.id === 'menuProfile') {
                 if (layoutWidth < 640) {
@@ -72,88 +84,27 @@ window.onload = function () {
             }
 
             // Fix borders of the PC menu.
-            if (this.id === 'menuHobbies') {
-                if (layoutWidth > 640) {
+            if (layoutWidth > 640) {
+                if (this.id === 'menuHobbies') {
+                    console.log("test")
                     menuHobbies.classList.remove('bottom-border');
                     menuTrainings.classList.add('bottom-border');
                 } else {
-                    menuHobbies.classList.remove('bottom-border');
-                }
-            } else {
-                if (layoutWidth > 640) {
-                    menuHobbies.classList.add('bottom-border');
                     menuTrainings.classList.remove('bottom-border');
+                    menuHobbies.classList.add('bottom-border');
+
                 }
             }
 
             // Add or remove the arrow at the bottom of Skills page when entering or leaving the page.
-            if (this.id === 'menuSkills') {
+            if (this.id === 'menuSkills' || this.id === 'menuProfile' && layoutWidth < 640) {
                 scrollHint.classList.add('arrow');
-                scrollHint.classList.add('down');
-                layout.style.height = getComputedStyle(menu).height;
             }
             else {
                 scrollHint.classList.remove('arrow');
                 scrollHint.classList.remove('end-arrow');
-                scrollHint.classList.remove('down');
             }
 
-            // switch (this.id) {
-            //     case 'menuProfile':
-            //         pages.forEach((page) => {
-            //             page.classList.remove('display');
-            //             page.classList.add('hide');
-            //         })
-            //         document.getElementById('profile').classList.remove('hide');
-            //         document.getElementById('profile').classList.add('display');
-            //         break;
-
-            //     case 'menuSkills':
-            //         pages.forEach((page) => {
-            //             page.classList.remove('display');
-            //             page.classList.add('hide');
-            //         })
-            //         document.getElementById('skills').classList.remove('hide');
-            //         document.getElementById('skills').classList.add('display');
-            //         break;
-
-            //     case 'menuProjects':
-            //         pages.forEach((page) => {
-            //             page.classList.remove('display');
-            //             page.classList.add('hide');
-            //         })
-            //         document.getElementById('projects').classList.remove('hide');
-            //         document.getElementById('projects').classList.add('display');
-            //         break;
-
-            //     case 'menuTrainings':
-            //         pages.forEach((page) => {
-            //             page.classList.remove('display');
-            //             page.classList.add('hide');
-            //         })
-            //         document.getElementById('trainings').classList.remove('hide');
-            //         document.getElementById('trainings').classList.add('display');
-            //         break;
-
-            //     case 'menuHobbies':
-            //         pages.forEach((page) => {
-            //             page.classList.remove('display');
-            //             page.classList.add('hide');
-            //         })
-            //         document.getElementById('hobbies').classList.remove('hide');
-            //         document.getElementById('hobbies').classList.add('display');
-            //         break;
-
-            //     default:
-            //         pages.forEach((page) => {
-            //             page.classList.remove('display');
-            //             page.classList.add('hide');
-            //         })
-            //         document.getElementById('profile').classList.remove('hide');
-            //         document.getElementById('profile').classList.add('display');
-            // }
-
-            // Refactor.
             // Hide all pages.
             pages.forEach((page) => {
                 page.classList.add('hide');
