@@ -40,8 +40,15 @@ window.onload = function () {
         layoutWidth = window.innerWidth;
 
         // Calculate the height of the pages according to the height of the menu when the page is resized.
-        let menuHeight = parseFloat(getComputedStyle(menu).height);
-        layout.style.height = (menuHeight - 1) + 'px';
+
+        if (layoutWidth < 640) {
+            let menuHeight = parseFloat(getComputedStyle(menu).height);
+            layout.style.height = (menuHeight - 1) + 'px';
+        } else {
+            let menuHeight = parseFloat(getComputedStyle(menu).height);
+            layout.style.height = (menuHeight) + 'px';
+        }
+
     });
 
     // Calculate the size of the scrollbar to replace the arrow css with end-arrow css.
