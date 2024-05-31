@@ -105,6 +105,14 @@ header {
     border-left: 1px solid gray;
 }
 
+.right-border {
+    border-right: 1px solid gray;
+}
+
+.remove-right-border {
+    border-right: none;
+}
+
 /* ============ Page hiding content ============ */
 
 .hide {

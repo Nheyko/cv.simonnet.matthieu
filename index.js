@@ -1,33 +1,36 @@
+const menu = document.getElementById('menu');
+const layout = document.getElementById('layout');
+const menuProfile = document.getElementById('menuProfile');
+const menuSkills = document.getElementById('menuSkills');
+const menuProjects = document.getElementById('menuProjects');
+const menuTrainings = document.getElementById('menuTrainings');
+const menuHobbies = document.getElementById('menuHobbies');
+const scrollHint = document.getElementById('scrollHint');
+const layoutInner = document.getElementById('layoutInner');
+
+const menus = [
+    document.getElementById('menuProfile'),
+    document.getElementById('menuSkills'),
+    document.getElementById('menuProjects'),
+    document.getElementById('menuTrainings'),
+    document.getElementById('menuHobbies')
+];
+
+const pages = [
+    document.getElementById('profile'),
+    document.getElementById('skills'),
+    document.getElementById('projects'),
+    document.getElementById('trainings'),
+    document.getElementById('hobbies')
+]
+
 window.onload = function () {
-
-    const menu = document.getElementById('menu');
-    const layout = document.getElementById('layout');
-    const menuProfile = document.getElementById('menuProfile');
-    const menuHobbies = document.getElementById('menuHobbies');
-    const menuTrainings = document.getElementById('menuTrainings')
-    const scrollHint = document.getElementById('scrollHint');
-    const layoutInner = document.getElementById('layoutInner');
-
-    const menus = [
-        document.getElementById('menuProfile'),
-        document.getElementById('menuSkills'),
-        document.getElementById('menuProjects'),
-        document.getElementById('menuTrainings'),
-        document.getElementById('menuHobbies')
-    ];
-
-    const pages = [
-        document.getElementById('profile'),
-        document.getElementById('skills'),
-        document.getElementById('projects'),
-        document.getElementById('trainings'),
-        document.getElementById('hobbies')
-    ]
 
     let layoutWidth = window.innerWidth;
 
-    // Calculate the height of the pages according to the height of the menu.
-    layout.style.height = getComputedStyle(menu).height;
+    // Calculate the height of the pages according to the height of the menu when the page is loaded.
+    let menuHeight = parseFloat(getComputedStyle(menu).height);
+    layout.style.height = (menuHeight - 1) + 'px';
 
     // Add the arrow at the loading of Profile page.
     scrollHint.classList.add('arrow');
@@ -35,21 +38,10 @@ window.onload = function () {
     // Calculate width to know if we are on phone or not.
     window.addEventListener('resize', function () {
         layoutWidth = window.innerWidth;
-        layout.style.height = getComputedStyle(menu).height;
 
-        // Fix borders bug when responsive mode.
-        if (layoutWidth > 640 && menuHobbies.classList.contains('selected')) {
-            menuHobbies.classList.remove('bottom-border');
-        }
-        else {
-            menuHobbies.classList.add('bottom-border');
-        }
-
-        if (layoutWidth < 640 && menuProfile.classList.contains('unselected')) {
-            menuProfile.classList.add('left-border');
-        } else if (layoutWidth < 640 && menuProfile.classList.contains('selected')) {
-            menuProfile.classList.remove('left-border');
-        }
+        // Calculate the height of the pages according to the height of the menu when the page is resized.
+        let menuHeight = parseFloat(getComputedStyle(menu).height);
+        layout.style.height = (menuHeight - 1) + 'px';
     });
 
     // Calculate the size of the scrollbar to replace the arrow css with end-arrow css.
@@ -75,28 +67,38 @@ window.onload = function () {
                 item.classList.add('unselected');
             });
 
-            // Fix borders of the Mobile menu.
-            if (this.id === 'menuProfile') {
-                if (layoutWidth < 640) {
-                    menuProfile.classList.remove('left-border');
-                }
+            // Fix borders of the PC menu.
+            if (this.id === 'menuHobbies') {
+                menuHobbies.classList.remove('bottom-border');
             } else {
-                if (layoutWidth < 640) {
-                    menuProfile.classList.add('left-border');
-                }
+                menuHobbies.classList.add('bottom-border');
             }
 
-            // Fix borders of the PC menu.
-            if (layoutWidth > 640) {
-                if (this.id === 'menuHobbies') {
-                    console.log("test")
-                    menuHobbies.classList.remove('bottom-border');
-                    menuTrainings.classList.add('bottom-border');
-                } else {
-                    menuTrainings.classList.remove('bottom-border');
-                    menuHobbies.classList.add('bottom-border');
-
-                }
+            // Adjust buttons border for mobile version.
+            if (this.id === 'menuProfile') {
+                menuProfile.classList.remove('left-border');
+            } else {
+                menuProfile.classList.add('left-border');
+            }
+            if (this.id === 'menuSkills') {
+                menuProfile.classList.add('remove-right-border');
+            } else {
+                menuProfile.classList.remove('remove-right-border');
+            }
+            if (this.id === 'menuProjects') {
+                menuSkills.classList.add('remove-right-border');
+            } else {
+                menuSkills.classList.remove('remove-right-border');
+            }
+            if (this.id === 'menuTrainings') {
+                menuProjects.classList.add('remove-right-border');
+            } else {
+                menuProjects.classList.remove('remove-right-border');
+            }
+            if (this.id === 'menuHobbies') {
+                menuTrainings.classList.add('remove-right-border');
+            } else {
+                menuTrainings.classList.remove('remove-right-border');
             }
 
             // Add or remove the arrow at the bottom of Skills page when entering or leaving the page.
