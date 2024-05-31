@@ -101,6 +101,8 @@ window.onload = function () {
 
             // Add or remove the arrow at the bottom of Skills page when entering or leaving the page.
             if (this.id === 'menuSkills' || this.id === 'menuProfile' && layoutWidth < 640) {
+                // Set the scroll bar at the top when changing page.
+                layoutInner.scrollTop = 0;
                 scrollHint.classList.add('arrow');
             }
             else {
