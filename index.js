@@ -26,10 +26,11 @@ const pages = [
 
 window.onload = function () {
 
+    // Calculate the width of the pages when the page is loaded.
     let layoutWidth = window.innerWidth;
 
     // Calculate the height of the pages according to the height of the menu when the page is loaded.
-    let menuHeight = parseFloat(getComputedStyle(menu).height);
+    let menuHeight = Math.ceil(parseFloat(getComputedStyle(menu).height));
     layout.style.height = (menuHeight - 1) + 'px';
 
     // Add the arrow at the loading of Profile page.
@@ -37,18 +38,19 @@ window.onload = function () {
 
     // Calculate width to know if we are on phone or not.
     window.addEventListener('resize', function () {
+
+        // Calculate the width of the pages when the page is loaded.
         layoutWidth = window.innerWidth;
+        menuHeight = Math.ceil(parseFloat(getComputedStyle(menu).height));
 
         // Calculate the height of the pages according to the height of the menu when the page is resized.
-
         if (layoutWidth < 640) {
-            let menuHeight = parseFloat(getComputedStyle(menu).height);
+            layout.style.height = (menuHeight) + 'px';
+        } else if (!menuHobbies.classList.contains('selected')) {
             layout.style.height = (menuHeight - 1) + 'px';
         } else {
-            let menuHeight = parseFloat(getComputedStyle(menu).height);
             layout.style.height = (menuHeight) + 'px';
         }
-
     });
 
     // Calculate the size of the scrollbar to replace the arrow css with end-arrow css.
