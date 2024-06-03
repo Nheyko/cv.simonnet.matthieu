@@ -2,9 +2,27 @@
 
 /* ============ HTML élements ============ */
 
+/* Added */
+html {
+    /* Added */
+    height: 100%;
+    /* Added */
+    height: -webkit-fill-available;
+}
+
 body {
     color: #E0E0E0;
     background-color: #121212;
+    /* Added */
+    height: 100%;
+    /* Added */
+    min-height: -moz-available;
+    /* Added */
+    min-height: -webkit-fill-available;
+    /* Added */
+    height: -webkit-fill-available;
+    /* Added */
+    height: -moz-available;
 }
 
 div {
@@ -34,7 +52,12 @@ header {
     display: flex;
     padding: 1.5rem;
     flex-direction: column-reverse;
-    height: 100vh;
+    /* Changed 100vh by 100% */
+    height: 100%;
+    /* Added*/
+    height: -webkit-fill-available;
+    /* Added */
+    height: -moz-available;
 }
 
 .layout {
