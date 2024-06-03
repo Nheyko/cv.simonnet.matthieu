@@ -4,24 +4,18 @@
 
 /* Added */
 html {
-    /* Added */
     height: 100%;
-    /* Added */
     height: -webkit-fill-available;
+    height: -moz-available;
 }
 
 body {
     color: #E0E0E0;
     background-color: #121212;
-    /* Added */
     height: 100%;
-    /* Added */
     min-height: -moz-available;
-    /* Added */
     min-height: -webkit-fill-available;
-    /* Added */
     height: -webkit-fill-available;
-    /* Added */
     height: -moz-available;
 }
 
@@ -52,11 +46,8 @@ header {
     display: flex;
     padding: 1.5rem;
     flex-direction: column-reverse;
-    /* Changed 100vh by 100% */
-    height: 100%;
-    /* Added*/
+    height: 100vh;
     height: -webkit-fill-available;
-    /* Added */
     height: -moz-available;
 }
 

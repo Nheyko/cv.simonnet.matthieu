@@ -33,11 +33,24 @@ window.onload = function () {
     let menuHeight = Math.ceil(parseFloat(getComputedStyle(menu).height));
     layout.style.height = (menuHeight - 1) + 'px';
 
-    // Add the arrow at the loading of Profile page.
-    scrollHint.classList.add('arrow');
+    if (menuProfile.classList.contains('selected') && isOverflowing(layoutInner)) {
+        // Add the arrow at the loading of Profile page if there is overflow.
+        scrollHint.classList.add('arrow');
+    }
 
     // Calculate width to know if we are on phone or not.
     window.addEventListener('resize', function () {
+
+        // Add the arrow at the resize of page if there is overflow.
+        if (isOverflowing(layoutInner)) {
+            // Set the scroll bar at the top when changing page.
+            layoutInner.scrollTop = 0;
+            scrollHint.classList.add('arrow');
+        }
+        else {
+            scrollHint.classList.remove('arrow');
+            scrollHint.classList.remove('end-arrow');
+        }
 
         // Calculate the width of the pages when the page is loaded.
         layoutWidth = window.innerWidth;
@@ -111,15 +124,18 @@ window.onload = function () {
             }
 
             // Add or remove the arrow at the bottom of Skills page when entering or leaving the page.
-            if (this.id === 'menuSkills' || this.id === 'menuProfile' && layoutWidth < 640) {
-                // Set the scroll bar at the top when changing page.
-                layoutInner.scrollTop = 0;
-                scrollHint.classList.add('arrow');
-            }
-            else {
-                scrollHint.classList.remove('arrow');
-                scrollHint.classList.remove('end-arrow');
-            }
+            // Added Timeout so it directly detect when we click on another page.
+            setTimeout(function () {
+                if (isOverflowing(layoutInner)) {
+                    // Set the scroll bar at the top when changing page.
+                    layoutInner.scrollTop = 0;
+                    scrollHint.classList.add('arrow');
+                }
+                else {
+                    scrollHint.classList.remove('arrow');
+                    scrollHint.classList.remove('end-arrow');
+                }
+            }, 0);
 
             // Hide all pages.
             pages.forEach((page) => {
@@ -156,4 +172,8 @@ window.onload = function () {
             this.classList.add('selected');
         });
     });
+}
+
+function isOverflowing(element) {
+    return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
 }
