@@ -174,6 +174,7 @@ window.onload = function () {
     });
 }
 
+// Detect if a page has overflowing in it.
 function isOverflowing(element) {
     return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
 }
