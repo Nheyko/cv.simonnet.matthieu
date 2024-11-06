@@ -1,8 +1,6 @@
 /* PC & Mobile Version */
 
 /* ============ HTML élements ============ */
-
-/* Added */
 html {
     height: 100%;
     height: -webkit-fill-available;
@@ -41,7 +39,6 @@ header {
 }
 
 /* ============ Layout ============ */
-
 .outer-layout {
     display: flex;
     padding: 1.5rem;
@@ -74,13 +71,11 @@ header {
 }
 
 /* ============ Text ============ */
-
 .legend {
     font-size: 0.60em;
 }
 
 /* ============ Navigation ============ */
-
 .menu {
     display: flex;
     height: 50px;
@@ -114,7 +109,6 @@ header {
 }
 
 /* ============ Additional borders ============ */
-
 .left-border {
     border-left: 1px solid gray;
 }
@@ -128,14 +122,12 @@ header {
 }
 
 /* ============ Page hiding content ============ */
-
 .hide {
     height: 0;
     overflow: hidden;
 }
 
 /* ============ Corner for stars in Skills page ============ */
-
 .line-horizontal-top::after {
     width: 8px;
     border-top: 1px solid white;
@@ -173,7 +165,6 @@ header {
 }
 
 /* ============ Arrow for Skills bottom page ============ */
-
 .arrow {
     border: solid white;
     border-width: 0 3px 3px 0;
@@ -200,7 +191,6 @@ header {
 
 /* PC Only*/
 @media only screen and (min-width: 640px) {
-
     /* ============ HTML élements ============ */
 
     body {
@@ -217,7 +207,6 @@ header {
     }
 
     /* ============ Layout ============ */
-
     .outer-layout {
         margin: 0 auto;
         min-width: 1280px;
@@ -235,13 +224,11 @@ header {
     }
 
     /* ============ Text ============ */
-
     .legend {
         font-size: 1em;
     }
 
     /* ============ Arrow for Skills bottom page ============ */
-
     .arrow {
         border: solid white;
         border-width: 0 3px 3px 0;
@@ -265,7 +252,6 @@ header {
     }
 
     /* ============ Navigation ============ */
-
     .menu {
         display: block;
         height: fit-content;
@@ -302,14 +288,12 @@ header {
     }
 
     /* ============ Page hiding content ============ */
-
     .hide {
         height: 0;
         overflow: hidden;
     }
 
     /* ============ Additional borders ============ */
-
     .bottom-border {
         border-bottom: 1px solid gray;
     }
