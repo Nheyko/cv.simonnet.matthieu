@@ -1,535 +1,680 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>CV Simonnet Matthieu</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="index.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="index.css" />
-  <title>CV Simonnet Matthieu</title>
-</head>
-
-<body>
-  <div class="outer-layout">
-
-    <div class="menu" id="menu">
-      <div class="selected menu-tab" id="menuProfile">
-        <p class="menu-text-tab">PROFIL</p>
+  <body>
+    <div class="outer-layout">
+      <div class="menu" id="menu">
+        <div class="selected menu-tab" id="menuProfile">
+          <p class="menu-text-tab">PROFIL</p>
+        </div>
+        <div class="unselected menu-tab" id="menuSkills">
+          <p class="menu-text-tab">COMPÉTENCES</p>
+        </div>
+        <div class="unselected menu-tab" id="menuProjects">
+          <p class="menu-text-tab">PROJETS</p>
+        </div>
+        <div class="unselected menu-tab" id="menuTrainings">
+          <p class="menu-text-tab">FORMATIONS</p>
+        </div>
+        <div class="unselected menu-tab bottom-border" id="menuHobbies">
+          <p class="menu-text-tab">LOISIRS</p>
+        </div>
       </div>
-      <div class="unselected menu-tab" id="menuSkills">
-        <p class="menu-text-tab">COMPÉTENCES</p>
-      </div>
-      <div class="unselected menu-tab" id="menuProjects">
-        <p class="menu-text-tab">PROJETS</p>
-      </div>
-      <div class="unselected menu-tab" id="menuTrainings">
-        <p class="menu-text-tab">FORMATIONS</p>
-      </div>
-      <div class="unselected menu-tab bottom-border" id="menuHobbies">
-        <p class="menu-text-tab">LOISIRS</p>
-      </div>
-    </div>
 
-    <div class="layout border-t border-b border-r border-white" id="layout">
-      <div class="layout-inner" id="layoutInner">
-        <header class="pb-5">
-          <h1 class="text-2xl sm:text-5xl">CV SIMONNET Matthieu</h1>
-          <h2 class="text-xl sm:text-4xl">Développeur Web Junior</h2>
-          <hr class="mt-1" />
-        </header>
+      <div class="layout border-t border-b border-r border-white" id="layout">
+        <div class="layout-inner" id="layoutInner">
+          <header class="pb-5">
+            <h1 class="text-2xl sm:text-5xl">CV SIMONNET Matthieu</h1>
+            <h2 class="text-xl sm:text-4xl">Développeur Web Junior</h2>
+            <hr class="mt-1" />
+          </header>
 
-        <main>
-          <div class="sm:pl-10" id="profile">
-            <h3 class="text-xl sm:text-3xl ">Profil</h3>
-            <hr class="mb-5" />
+          <main>
+            <div class="sm:pl-10" id="profile">
+              <h3 class="text-xl sm:text-3xl">Profil</h3>
+              <hr class="mb-5" />
 
-            <div class="sm:pl-10">
-              <p>33 ans</p>
-              <p>17 Rue du Gua</p>
-              <p>Sassenage, Isère</p>
-              <p>07 61 17 43 61</p>
-              <p class="mb-5">matthieu.simonnet9@gmail.com</p>
-
-              <p>Français natif</p>
-              <p>Anglais B2</p>
-              <p class="mb-5">Coréen notions</p>
-
-              <p>Maintenant disponible pour toutes vos missions !</p>
-              <a href="https://github.com/Nheyko">https://github.com/Nheyko</a>
-
-              <p class="mt-5">
-                Diplômé en Concepteur Développeur d'Applications et passioné
-                de développement web depuis plusieurs années, je me suis
-                spécialisé dans Angular et NestJS.
-              </p>
-
-              <p class="mt-5">
-                Pendant mon apprentissage, j'ai aussi eu l'occasion de toucher un peu à React et Python ainsi
-                que d'autres language comme le C, C++ et Java.
-              </p>
-
-              <p class="mt-5">
-                La stack que j'utilise pour mes projets perso : HTML5, CSS3,
-                Tailwind, ES6+, Typescript, Angular, TypeORM Mysql2.
-              </p>
-            </div>
-          </div>
-
-          <div class="hide sm:pl-10" id="skills">
-            <div class="sm:flex sm:text-xl sm:justify-between sm:items-end block">
-              <h3 class="text-xl sm:text-3xl">Compétences</h3>
-              <p class="legend">[ &#9733; - Notion |
-                &#9733; &#9733; - Base |
-                &#9733; &#9733; &#9733; - Avancé |
-                &#9733; &#9733; &#9733; &#9733; - Maitrisé ]</p>
-            </div>
-            <hr class="mb-5" />
-
-            <div>
               <div class="sm:pl-10">
-                <h4 class="text-xl sm:text-2xl">Langage</h4>
-                <hr class="mb-5" />
-                <ul class="pl-3 sm:pl-10">
+                <p>33 ans</p>
+                <p>17 Rue du Gua</p>
+                <p>Sassenage, Isère</p>
+                <p>07 61 17 43 61</p>
+                <p class="mb-5">matthieu.simonnet9@gmail.com</p>
+
+                <p>Français natif</p>
+                <p>Anglais B2</p>
+                <p class="mb-5">Coréen notions</p>
+
+                <p>Maintenant disponible pour toutes vos missions !</p>
+                <a href="https://github.com/Nheyko"
+                  >https://github.com/Nheyko</a
+                >
+
+                <p class="mt-5">
+                  Diplômé en Concepteur Développeur d'Applications et passioné
+                  de développement web depuis plusieurs années, je me suis
+                  spécialisé dans Angular et NestJS.
+                </p>
+
+                <p class="mt-5">
+                  Pendant mon apprentissage, j'ai aussi eu l'occasion de toucher
+                  un peu à React et Python ainsi que d'autres language comme le
+                  C, C++ et Java.
+                </p>
+
+                <p class="mt-5">
+                  La stack que j'utilise pour mes projets perso : HTML5, CSS3,
+                  TailwindCSS, Bootstrap, Javascript ES6+, Typescript, Angular
+                  17+, NestJS, TypeORM, MySQL || MariaDB.
+                </p>
+              </div>
+            </div>
+
+            <div class="hide sm:pl-10" id="skills">
+              <div
+                class="sm:flex sm:text-xl sm:justify-between sm:items-end block"
+              >
+                <h3 class="text-xl sm:text-3xl">Compétences</h3>
+                <p class="legend">
+                  [ &#9733; - Notion | &#9733; &#9733; - Base | &#9733; &#9733;
+                  &#9733; - Avancé | &#9733; &#9733; &#9733; &#9733; - Maitrisé
+                  ]
+                </p>
+              </div>
+              <hr class="mb-5" />
+
+              <div>
+                <div class="sm:pl-10">
+                  <h4 class="text-xl sm:text-2xl">Langage</h4>
+                  <hr class="mb-5" />
+                  <ul class="pl-3 sm:pl-10">
+                    <li>
+                      <p>
+                        <span class="mr-2">HTML5</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9733; &#9733;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <span class="mr-2">CSS3</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9733; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <span class="mr-2">PHP</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <span class="mr-2"
+                          >Typescript & JavaScript (ES-2022)</span
+                        >
+
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9733; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <span class="mr-2">Python</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <span class="mr-2">Java</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9734; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <span class="mr-2">C</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9734; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+
+                    <li>
+                      <p>
+                        <span class="mr-2">C++</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9734; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-5 sm:pl-10">
+                  <h4 class="text-xl sm:text-2xl">Framework & API</h4>
+                  <hr class="mb-5" />
+                  <ul class="pl-3 sm:pl-10">
+                    <li>
+                      <p>
+                        <span class="mr-2">Angular</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9733; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">NestJS</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">React</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9734; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">TailwindCSS</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                      <p>
+                        <span class="mr-2">Bootstrap</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">socket.io</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">API Rest</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-5 sm:pl-10">
+                  <h4 class="text-xl sm:text-2xl">Serveur web</h4>
+                  <hr class="mb-5" />
+                  <ul class="pl-3 sm:pl-10">
+                    <li>
+                      <p>
+                        <span class="mr-2">NodeJS</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9734; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">Express</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9734; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-5 sm:pl-10">
+                  <h4 class="text-xl sm:text-2xl">SGBD</h4>
+                  <hr class="mb-5" />
+                  <ul class="pl-3 sm:pl-10">
+                    <li>
+                      <p>
+                        <span class="mr-2">MySQL</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">StarUML</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9734; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-5 sm:pl-10">
+                  <h4 class="text-xl sm:text-2xl">ORM</h4>
+                  <hr class="mb-5" />
+                  <ul class="pl-3 sm:pl-10">
+                    <li>
+                      <p>
+                        <span class="mr-2">TypeORM</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-5 sm:pl-10">
+                  <h4 class="text-xl sm:text-2xl">Versioning</h4>
+                  <hr class="mb-5" />
+                  <ul class="pl-3 sm:pl-10">
+                    <li>
+                      <p>
+                        <span class="mr-2">Git</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">Github</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-5 sm:pl-10">
+                  <h4 class="text-xl sm:text-2xl">Méthodologie</h4>
+                  <hr class="mb-5" />
+                  <ul class="pl-3 sm:pl-10">
+                    <li>
+                      <p>
+                        <span class="mr-2">Scrum</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">Kanban</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9733; &#9733;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-5 sm:pl-10">
+                  <h4 class="text-xl sm:text-2xl">IDE</h4>
+                  <hr class="mb-5" />
+                  <ul class="pl-3 sm:pl-10">
+                    <li>
+                      <p>
+                        <span class="mr-2">Visual Studio Code</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9733; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mt-5 sm:pl-10">
+                  <h4 class="text-xl sm:text-2xl">OS</h4>
+                  <hr class="mb-5" />
+                  <ul class="pl-3 sm:pl-10">
+                    <li>
+                      <p>
+                        <span class="mr-2">Windows</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9733; &#9733; &#9733;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="mr-2">Linux</span>
+                        <span
+                          class="line-horizontal-top line-vertical-left"
+                        ></span>
+                        <span class="mx-1">
+                          &#9733; &#9734; &#9734; &#9734;
+                        </span>
+                        <span
+                          class="line-vertical-right line-horizontal-bottom"
+                        ></span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="hide sm:pl-10" id="projects">
+              <h3 class="text-xl sm:text-3xl">Projets professionnels</h3>
+              <hr class="mb-5" />
+              <div class="pl-3 sm:pl-10">
+                <ul>
                   <li>
                     <p>
-                      <span class="mr-2">HTML5</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9733; &#9733;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <span class="mr-2">CSS3</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9733; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <span class="mr-2">PHP</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <span class="mr-2">Typescript & JavaScript (ES-2022)</span>
-
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9733; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <span class="mr-2">Python</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <span class="mr-2">Java</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9734; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <span class="mr-2">C</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9734; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-
-                  <li>
-                    <p>
-                      <span class="mr-2">C++</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9734; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
+                      Projet de fin d'étude chez l'entreprise TempoJob:
+                      <a
+                        href="https://github.com/Nheyko/TempoJobCompta"
+                        target="_blank"
+                        >https://github.com/Nheyko/TempoJobCompta</a
+                      >
                     </p>
                   </li>
                 </ul>
               </div>
 
-              <div class="mt-5 sm:pl-10">
-                <h4 class="text-xl sm:text-2xl">Framework & API</h4>
-                <hr class="mb-5" />
-                <ul class="pl-3 sm:pl-10">
+              <h3 class="text-xl sm:text-3xl mt-5">Projets personnels</h3>
+              <hr class="mb-5" />
+              <div class="pl-3 sm:pl-10">
+                <ul>
                   <li>
                     <p>
-                      <span class="mr-2">Angular</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9733; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
+                      Chatbox avec système d'authentification, messages privés
+                      et liste de gens connectés:
+                      <a
+                        href="https://github.com/Nheyko/angular-nestjs-chatbox-v3"
+                        target="_blank"
+                        >https://github.com/Nheyko/angular-nestjs-chatbox-v3</a
+                      >
                     </p>
                   </li>
-                  <li>
-                    <p>
-                      <span class="mr-2">NestJS</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
 
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
                   <li>
-                    <p>
-                      <span class="mr-2">React</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9734; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
+                    <p class="mt-5">
+                      Todo list en Angular et NestJs:
+                      <a
+                        href="https://github.com/Nheyko/angular-nestjs-to-do-list"
+                        target="_blank"
+                        >https://github.com/Nheyko/angular-nestjs-to-do-list</a
+                      >
                     </p>
                   </li>
-                  <li>
-                    <p>
-                      <span class="mr-2">TailwindCSS</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <span class="mr-2">socket.io</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <span class="mr-2">API Rest</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
 
-              <div class="mt-5 sm:pl-10">
-                <h4 class="text-xl sm:text-2xl">Serveur web</h4>
-                <hr class="mb-5" />
-                <ul class="pl-3 sm:pl-10">
                   <li>
-                    <p>
-                      <span class="mr-2">NodeJS</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9734; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
+                    <p class="mt-5">
+                      Entrainement système d'authentification avec Angular et
+                      NestJS:
+                      <a
+                        href="https://github.com/Nheyko/angular-nestjs-auth-v1"
+                        target="_blank"
+                        >https://github.com/Nheyko/angular-nestjs-auth-v1</a
+                      >
                     </p>
                   </li>
-                  <li>
-                    <p>
-                      <span class="mr-2">Express</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9734; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
 
-              <div class="mt-5 sm:pl-10">
-                <h4 class="text-xl sm:text-2xl">SGBD</h4>
-                <hr class="mb-5" />
-                <ul class="pl-3 sm:pl-10">
                   <li>
-                    <p>
-                      <span class="mr-2">MySQL</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
+                    <p class="mt-5">
+                      Découverte des mécaniques d'un rpg avec python:
+                      <a
+                        href="https://github.com/Nheyko/Kitsuneko"
+                        target="_blank"
+                        >https://github.com/Nheyko/Kitsuneko</a
+                      >
                     </p>
                   </li>
-                  <li>
-                    <p>
-                      <span class="mr-2">StarUML</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9734; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
 
-              <div class="mt-5 sm:pl-10">
-                <h4 class="text-xl sm:text-2xl">ORM</h4>
-                <hr class="mb-5" />
-                <ul class="pl-3 sm:pl-10">
                   <li>
-                    <p>
-                      <span class="mr-2">TypeORM</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="mt-5 sm:pl-10">
-                <h4 class="text-xl sm:text-2xl">Versioning</h4>
-                <hr class="mb-5" />
-                <ul class="pl-3 sm:pl-10">
-                  <li>
-                    <p>
-                      <span class="mr-2">Git</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <span class="mr-2">Github</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="mt-5 sm:pl-10">
-                <h4 class="text-xl sm:text-2xl">Méthodologie</h4>
-                <hr class="mb-5" />
-                <ul class="pl-3 sm:pl-10">
-                  <li>
-                    <p>
-                      <span class="mr-2">Scrum</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <span class="mr-2">Kanban</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9733; &#9733;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="mt-5 sm:pl-10">
-                <h4 class="text-xl sm:text-2xl">IDE</h4>
-                <hr class="mb-5" />
-                <ul class="pl-3 sm:pl-10">
-                  <li>
-                    <p>
-                      <span class="mr-2">Visual Studio Code</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9733; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="mt-5 sm:pl-10">
-                <h4 class="text-xl sm:text-2xl">OS</h4>
-                <hr class="mb-5" />
-                <ul class="pl-3 sm:pl-10">
-                  <li>
-                    <p>
-                      <span class="mr-2">Windows</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9733; &#9733; &#9733;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <span class="mr-2">Linux</span>
-                      <span class="line-horizontal-top line-vertical-left"></span>
-                      <span class="mx-1">
-                        &#9733; &#9734; &#9734; &#9734;
-                      </span>
-                      <span class="line-vertical-right line-horizontal-bottom"></span>
+                    <p class="mt-5">
+                      Autres projets:
+                      <a href="https://github.com/Nheyko/" target="_blank"
+                        >https://github.com/Nheyko/</a
+                      >
                     </p>
                   </li>
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div class="hide sm:pl-10" id="projects">
-            <h3 class="text-xl sm:text-3xl">Projets professionnels</h3>
-            <hr class="mb-5" />
-            <div class="pl-3 sm:pl-10">
-              <ul>
-                <li>
-                  <p>
-                    Projet de fin d'étude chez l'entreprise TempoJob:
-                    <a href="https://github.com/Nheyko/TempoJobCompta"
-                      target="_blank">https://github.com/Nheyko/TempoJobCompta</a>
-                  </p>
-                </li>
-              </ul>
+            <div class="hide sm:pl-10" id="trainings">
+              <h3 class="text-xl sm:text-3xl">Formations</h3>
+              <hr class="mb-5" />
+              <div class="pl-3 sm:pl-10">
+                <ul>
+                  <li class="mb-5">
+                    <p>
+                      Titre de Concepteur Développeur d'Applications (Diplôme de
+                      niveau II)
+                    </p>
+                    <p>2021-2022</p>
+                    <p>M2i, 69003 Lyon</p>
+                  </li>
+                  <li>
+                    <p>Test d'entrée à l'école 42 (Piscine)</p>
+                    <p>Oct 2020 - Nov 2020</p>
+                    <p>42 Lyon, 69002 Lyon</p>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <h3 class="text-xl sm:text-3xl mt-5">Projets personnels</h3>
-            <hr class="mb-5" />
-            <div class="pl-3 sm:pl-10">
-              <ul>
-                <li>
-                  <p>
-                    Chatbox avec système d'authentification, messages privés et liste de gens connectés:
-                    <a href="https://github.com/Nheyko/angular-nestjs-chatbox-v3"
-                      target="_blank">https://github.com/Nheyko/angular-nestjs-chatbox-v3</a>
-                  </p>
-                </li>
+            <div class="hide sm:pl-10" id="hobbies">
+              <h3 class="text-xl sm:text-3xl">Loisirs</h3>
+              <hr class="mb-5" />
+              <div class="pl-3 sm:pl-10">
+                <ul>
+                  <li>
+                    <p>Développement / web / jeux vidéos</p>
+                  </li>
 
-                <li>
-                  <p class="mt-5">
-                    Todo list en Angular et NestJs:
-                    <a href="https://github.com/Nheyko/angular-nestjs-to-do-list"
-                      target="_blank">https://github.com/Nheyko/angular-nestjs-to-do-list</a>
-                  </p>
-                </li>
-
-                <li>
-                  <p class="mt-5">
-                    Entrainement système d'authentification avec Angular et NestJS:
-                    <a href="https://github.com/Nheyko/angular-nestjs-auth-v1"
-                      target="_blank">https://github.com/Nheyko/angular-nestjs-auth-v1</a>
-                  </p>
-                </li>
-
-                <li>
-                  <p class="mt-5">
-                    Découverte des mécaniques d'un rpg avec python:
-                    <a href="https://github.com/Nheyko/Kitsuneko"
-                      target="_blank">https://github.com/Nheyko/Kitsuneko</a>
-                  </p>
-                </li>
-
-                <li>
-                  <p class="mt-5">
-                    Autres projets comme stage de fin d'étude et apprentissage pendant ma formation:
-                    <a href="https://github.com/Nheyko/" target="_blank">https://github.com/Nheyko/</a>
-                  </p>
-                </li>
-              </ul>
+                  <li>
+                    <p>IA</p>
+                  </li>
+                  <li>
+                    <p>Musique</p>
+                  </li>
+                  <li>
+                    <p>Animation japonaise</p>
+                  </li>
+                  <li>
+                    <p>Culture anglaise et asiatique en général</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-
-          <div class="hide sm:pl-10" id="trainings">
-            <h3 class="text-xl sm:text-3xl">Formations</h3>
-            <hr class="mb-5" />
-            <div class="pl-3 sm:pl-10">
-              <ul>
-                <li class="mb-5">
-                  <p>Titre de Concepteur Développeur d'Applications (Diplôme de niveau II)</p>
-                  <p>2021-2022</p>
-                  <p>M2i, 69003 Lyon</p>
-                </li>
-                <li>
-                  <p>Test d'entrée à l'école 42 (Piscine)</p>
-                  <p>Oct 2020 - Nov 2020</p>
-                  <p>42 Lyon, 69002 Lyon</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="hide sm:pl-10" id="hobbies">
-            <h3 class="text-xl sm:text-3xl">Loisirs</h3>
-            <hr class="mb-5" />
-            <div class="pl-3 sm:pl-10">
-              <ul>
-                <li>
-                  <p>Développement / web / jeux vidéos</p>
-                <li>
-                  <p>IA</p>
-                </li>
-                <li>
-                  <p>Musique</p>
-                </li>
-                <li>
-                  <p>Animation japonaise</p>
-                </li>
-                <li>
-                  <p>Culture anglaise et asiatique en général</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </main>
-        <footer>
-        </footer>
+          </main>
+          <footer></footer>
+        </div>
+        <div class="scroll-hint" id="scrollHint"></div>
       </div>
-      <div class="scroll-hint" id="scrollHint"></div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
